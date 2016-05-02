@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="col-xs-7 col-md-8 col-sm-8 col-lg-8">
+    <button ng-repeat= "item in items"class="btn btn-success" data-toggle="collapse" data-target="#{{item.name}}">{{item.name}}     <div class="collapse" id="{{item.name}}">Text here</div>
+</button>
+    <div class="collapse" id="{{item.name}}">Text here</div>
+      <div ng-repeat="item in items" class="panel panel-primary">
+              <div class="panel-heading">
+                  <h3 class="panel-title">{{item.name}}</h3>
+              </div>
+              <div class="collapse" id="{{item.name}}">
+              <div class="collapse panel-body">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="{{item.img}}.jpg"class="media-object" style="width: 64px; height: 64px;"> </a>
+                    </div>
+                    <ul>
+                  <li>The price is: {{item.price}}</li>
+                  <li>The category is: {{item.cat}}</li>
+                  </ul>
+              </div> </div>
+          </div>
+      </div>
